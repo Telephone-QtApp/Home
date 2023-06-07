@@ -1,39 +1,17 @@
-import QtQuick
+import QtQuick 2.9
+import QtQuick.Window 2.2
+import Enums 1.0
 import QtQuick.VirtualKeyboard
 
-Window {
+Item {
     id: window
-    width: 640
-    height: 480
+    width: 300
+    height: 300
     visible: true
-    title: qsTr("Hello World")
 
-    InputPanel {
-        id: inputPanel
-        z: 99
-        x: 0
-        y: window.height
-        width: window.width
-
-        states: State {
-            name: "visible"
-            when: inputPanel.active
-            PropertyChanges {
-                target: inputPanel
-                y: window.height - inputPanel.height
-            }
-        }
-        transitions: Transition {
-            from: ""
-            to: "visible"
-            reversible: true
-            ParallelAnimation {
-                NumberAnimation {
-                    properties: "y"
-                    duration: 250
-                    easing.type: Easing.InOutQuad
-                }
-            }
-        }
+    Rectangle {
+        width: 200
+        height: 200
+        color: 'red'
     }
 }

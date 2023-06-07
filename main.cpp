@@ -1,21 +1,16 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
 
+#include "AppWindow/AppMain.h"
+
 
 int main(int argc, char *argv[])
 {
     qputenv("QT_IM_MODULE", QByteArray("qtvirtualkeyboard"));
 
     QGuiApplication app(argc, argv);
-
-    QQmlApplicationEngine engine;
-    const QUrl url(u"qrc:/Home/main.qml"_qs);
-    QObject::connect(&engine, &QQmlApplicationEngine::objectCreated,
-        &app, [url](QObject *obj, const QUrl &objUrl) {
-            if (!obj && url == objUrl)
-                QCoreApplication::exit(-1);
-        }, Qt::QueuedConnection);
-    engine.load(url);
+    AppMain *appmain = AppMain::getInstance();
+    appmain->initAppMain();
 
     return app.exec();
 }
