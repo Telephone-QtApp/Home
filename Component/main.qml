@@ -5,13 +5,12 @@ import QtQuick.VirtualKeyboard
 
 Item {
     id: window
-    width: 300
-    height: 300
+    width: 700; height: 1100
     visible: true
 
-    Rectangle {
-        width: 200
-        height: 200
-        color: 'red'
+    Loader {
+        id: homePage
+        anchors.fill: parent
+        source: "qrc:/Component/HomePage.qml"
     }
 }

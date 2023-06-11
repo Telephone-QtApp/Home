@@ -11,19 +11,6 @@ AppMain::~AppMain()
 
 }
 
-int AppMain::currentView() const
-{
-    return m_currentView;
-}
-
-void AppMain::setCurrentView(int newCurrentView)
-{
-    if (m_currentView == newCurrentView)
-        return;
-    m_currentView = newCurrentView;
-    emit currentViewChanged();
-}
-
 AppMain *AppMain::getInstance()
 {
     static AppMain* ins = new AppMain();
@@ -43,7 +30,7 @@ void AppMain::createView()
 
     m_view->rootContext()->setContextProperty("myAppMain", this);
 
-    m_appWindow->onCreateWindow(m_view);
+    m_appWindow->createWindow(m_view);
 }
 
 void AppMain::initAppMain()

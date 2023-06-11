@@ -9,7 +9,7 @@ class AppWindow : public QObject
     Q_OBJECT
 public:
     static AppWindow* getInstance();
-    void onCreateWindow(QQuickView* view);
+    void createWindow(QQuickView* view);
 
 private:
     AppWindow();

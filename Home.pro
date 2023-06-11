@@ -5,12 +5,15 @@ SOURCES += \
         AppWindow/AppWindow.cpp \
         Common/Enums.cpp \
         main.cpp
-
-resources.files = main.qml 
 resources.prefix = /$${TARGET}
-RESOURCES += resources
+RESOURCES += resources \
+    Home.qrc
+
+resources.files = Component/main.qml
 
 HEADERS += \
     AppWindow/AppMain.h \
     AppWindow/AppWindow.h \
     Common/Enums.h
+
+DISTFILES +=
