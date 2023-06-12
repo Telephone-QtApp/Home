@@ -7,7 +7,8 @@ SOURCES += \
         main.cpp
 resources.prefix = /$${TARGET}
 RESOURCES += resources \
-    Home.qrc
+    Home.qrc \
+    Images.qrc
 
 resources.files = Component/main.qml
 

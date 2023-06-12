@@ -2,9 +2,10 @@ import QtQuick 2.15
 
 Item {
     id: container
-    width: 115
-    height: 115
     property string sourceIcon: ""
+    property string type: ""
+    width: type === "small" ? 100 : 90
+    height: type === "small" ? 100 : 90
 
     Image {
         anchors.fill: container
