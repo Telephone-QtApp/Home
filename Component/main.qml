@@ -1,6 +1,5 @@
 import QtQuick 2.9
 import QtQuick.Window 2.2
-import Enums 1.0
 import QtQuick.VirtualKeyboard
 
 Item {

@@ -7,19 +7,9 @@ Image {
     width: 700; height: 1100
     source: "qrc:/Assets/background.jpg"
 
-    ListModel {
-        id: myModel
-        ListElement { icon: "qrc:/Assets/phone.png"; name: "Phone"; type: "small" }
-        ListElement { icon: "qrc:/Assets/setting.png"; name: "Setting"; type: "small"  }
-        ListElement { icon: "qrc:/Assets/facetime.png"; name: "Facetime"; type: "medium"  }
-        ListElement { icon: "qrc:/Assets/gallery.jpg"; name: "Gallery"; type: "medium"  }
-        ListElement { icon: "qrc:/Assets/message.png"; name: "Message"; type: "medium"  }
-        ListElement { icon: "qrc:/Assets/safari.png"; name: "Safari"; type: "small"  }
-    }
-
     GridView {
         id: grid
-        model: myModel
+        model: homeController
         width: 600
         height: 900
         anchors.left: myImage.left
@@ -35,7 +25,7 @@ Image {
                 id: img
                 type: model.type
                 anchors.centerIn: parent
-                sourceIcon: model.icon
+                sourceIcon: model.image
             }
             Text {
                 anchors.top: img.bottom

@@ -3,26 +3,29 @@
 
 #include <QObject>
 #include <QQuickView>
-#include <QDebug>
 #include <QQmlContext>
+#include <memory>
 #include "AppWindow.h"
-#include "Common/Enums.h"
+#include "Controller/HomeController.h"
 
 class AppMain : public QObject
 {
     Q_OBJECT
 
 public:
-    static AppMain *getInstance();
-    void createView();
+    static AppMain *instance();
+    bool createWindow();
     void initAppMain();
+    void registerContextProperty();
+    void registerEnumType();
 
 private:
     explicit AppMain(QObject *parent = nullptr);
     ~AppMain();
 
 private:
-    AppWindow* m_appWindow {nullptr};
+    std::shared_ptr<AppWindow> m_appWindow;
+    std::shared_ptr<HomeController> m_controller;
     QQuickView* m_view {nullptr};
 };
 

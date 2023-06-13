@@ -1,9 +1,11 @@
 #include "AppMain.h"
+#include "Common/Enums.h"
 #include <QDebug>
 
 AppMain::AppMain(QObject *parent) : QObject(parent)
 {
-
+    m_appWindow = std::shared_ptr<AppWindow>(new AppWindow());
+    m_controller = std::shared_ptr<HomeController>(new HomeController());
 }
 
 AppMain::~AppMain()
@@ -11,30 +13,43 @@ AppMain::~AppMain()
 
 }
 
-AppMain *AppMain::getInstance()
+AppMain *AppMain::instance()
 {
     static AppMain* ins = new AppMain();
     return ins;
 }
 
-void AppMain::createView()
+bool AppMain::createWindow()
 {
-    m_appWindow = AppWindow::getInstance();
     if (nullptr == m_view) {
         m_view = new QQuickView();
     }
-    qmlRegisterType<Enums>("Enums", 1, 0, "Enums");
 
     if (m_view == nullptr)
-        return;
+        return false;
 
-    m_view->rootContext()->setContextProperty("myAppMain", this);
+    registerContextProperty();
+    registerEnumType();
 
     m_appWindow->createWindow(m_view);
+    return true;
 }
 
 void AppMain::initAppMain()
 {
-    qDebug() << "init AppMain";
-    createView();
+    if (createWindow())
+    {
+        m_controller->initHomeController();
+    }
+}
+
+void AppMain::registerContextProperty()
+{
+    m_view->rootContext()->setContextProperty("myAppMain", this);
+    m_view->rootContext()->setContextProperty("homeController", m_controller.get());
+}
+
+void AppMain::registerEnumType()
+{
+    qmlRegisterType<Enums>("Enums", 1, 0, "Enums");
 }

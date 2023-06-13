@@ -8,12 +8,11 @@ class AppWindow : public QObject
 {
     Q_OBJECT
 public:
-    static AppWindow* getInstance();
+    AppWindow();
+    ~AppWindow();
     void createWindow(QQuickView* view);
 
 private:
-    AppWindow();
-    ~AppWindow();
 
     QQuickView* m_view {nullptr};
 };
