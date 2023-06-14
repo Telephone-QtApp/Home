@@ -1,11 +1,27 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
 import './Common'
+import "../Component" as CItems
 
 Image {
     id: myImage
     width: 700; height: 1100
     source: "qrc:/Assets/background.jpg"
+
+    CItems.Header {
+        width: parent.width
+        x: 0
+        y: 0
+    }
+
+    CItems.Footer {
+        width: parent.width
+        height: 100
+        anchors {
+            bottom: parent.bottom
+            bottomMargin: 100
+        }
+    }
 
     GridView {
         id: grid
