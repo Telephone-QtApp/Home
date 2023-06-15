@@ -1,5 +1,4 @@
 #include "AppModel.h"
-#include <QDebug>
 
 AppModel::AppModel(QObject* parent) : QAbstractListModel(parent)
 {
@@ -18,7 +17,6 @@ int AppModel::rowCount(const QModelIndex &parent) const
 
 QVariant AppModel::data(const QModelIndex &index, int role) const
 {
-    qWarning() << "data";
     if (!index.isValid())
         return QVariant{};
 
@@ -52,21 +50,12 @@ QHash<int, QByteArray> AppModel::roleNames() const
     return roles;
 }
 
-void AppModel::beginResetModel()
+void AppModel::appendItem(QVector<DataItem*>& appList)
 {
-    QAbstractListModel::beginResetModel();
-}
+    if (m_appList.size() > 0)
+        m_appList.clear();
 
-void AppModel::endResetModel()
-{
-    QAbstractListModel::endResetModel();
-}
-
-void AppModel::appendItem(DataItem *item)
-{
-    if (item == nullptr)
-        return;
-
-    m_appList.push_back(item);
-    qWarning() << "append " << m_appList.size();
+    beginResetModel();
+    m_appList = appList;
+    endResetModel();
 }

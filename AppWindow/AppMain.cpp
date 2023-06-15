@@ -47,6 +47,7 @@ void AppMain::registerContextProperty()
 {
     m_view->rootContext()->setContextProperty("myAppMain", this);
     m_view->rootContext()->setContextProperty("homeController", m_controller.get());
+    m_view->rootContext()->setContextProperty("appModel", m_controller->getAppModelIns());
 }
 
 void AppMain::registerEnumType()

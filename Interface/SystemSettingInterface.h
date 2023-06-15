@@ -9,6 +9,10 @@ public:
 private:
     SystemSettingInterface();
     ~SystemSettingInterface();
+
+    bool doConnect() override;
+
+    bool doDisconnect() override;
 };
 
 #endif // SYSTEMSETTINGINTERFACE_H

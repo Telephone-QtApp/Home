@@ -9,7 +9,7 @@ Image {
 
     GridView {
         id: grid
-        model: homeController
+        model: appModel
         width: 600
         height: 900
         anchors.left: myImage.left
