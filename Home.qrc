@@ -5,5 +5,7 @@
         <file>Component/Header.qml</file>
         <file>Component/Footer.qml</file>
         <file>Component/Common/AppIcon.qml</file>
+        <file>DataHMI/Res/resources.js</file>
     </qresource>
+    <qresource prefix="/QML_RESOUCES"/>
 </RCC>

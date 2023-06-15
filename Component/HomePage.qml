@@ -9,17 +9,22 @@ Image {
     source: "qrc:/Assets/background.jpg"
 
     CItems.Header {
-        width: parent.width
-        x: 0
-        y: 0
+        width: 600
+        anchors {
+            horizontalCenter: parent.horizontalCenter
+            top: parent.top
+        }
+
     }
 
     CItems.Footer {
-        width: parent.width
-        height: 100
+        width: 600
+        height: 120
+        isRadius: 40
         anchors {
             bottom: parent.bottom
             bottomMargin: 100
+            horizontalCenter: parent.horizontalCenter
         }
     }
 

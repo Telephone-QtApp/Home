@@ -1,5 +1,6 @@
 import QtQuick 2.9
 import QtQuick.Controls 2.15
+import "../DataHMI/Res/resources.js" as RESOURCES
 
 Item {
     id: rootItem
@@ -39,10 +40,10 @@ Item {
             id: timeRec
             anchors {
                 left: parent.left
-                leftMargin: 20
+                leftMargin: 50
                 verticalCenter: parent.verticalCenter
             }
-            font.pixelSize: 28
+            font.pixelSize: 32
             color: "white"
             text: qsTr("22:22")
         }

@@ -32,7 +32,6 @@ private:
         Role_Img,
         Role_Name,
         Role_Type
-
     };
 
     QVector<DataItem*> m_appList;

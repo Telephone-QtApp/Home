@@ -1,9 +1,7 @@
 <RCC>
     <qresource prefix="/">
-        <file>Assets/facetime.png</file>
         <file>Assets/gallery.jpg</file>
         <file>Assets/message.png</file>
-        <file>Assets/safari.png</file>
         <file>Assets/setting.png</file>
         <file>Assets/background.jpg</file>
         <file>Assets/phone.png</file>
@@ -13,5 +11,7 @@
         <file>Assets/half_battery_icon.png</file>
         <file>Assets/full_battery_icon.png</file>
         <file>Assets/empty_battery_icon.png</file>
+        <file>Assets/safari_icon.png</file>
+        <file>Assets/face_time_icon.png</file>
     </qresource>
 </RCC>
