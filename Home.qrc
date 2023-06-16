@@ -6,4 +6,5 @@
         <file>Component/Footer.qml</file>
         <file>Component/Common/AppIcon.qml</file>
     </qresource>
+    <qresource prefix="/QML_RESOUCES"/>
 </RCC>

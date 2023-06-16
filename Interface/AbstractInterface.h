@@ -30,3 +30,4 @@ protected:
 };
 
 #endif // ABSTRACTINTERFACE_H
+
