@@ -1,29 +1,28 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
 import './Common'
-import "../Component" as CItems
+import "../Component" as Comp
 
 Image {
     id: myImage
     width: 700; height: 1100
     source: "qrc:/Assets/background.jpg"
 
-    CItems.Header {
+    Comp.Header {
         width: 648
         anchors {
             horizontalCenter: parent.horizontalCenter
             top: parent.top
         }
-
     }
 
-    CItems.Footer {
+    Comp.Footer {
         width: 588
         height: 142
         isRadius: 50
         anchors {
             bottom: parent.bottom
-            bottomMargin: 100
+            bottomMargin: 30
             horizontalCenter: parent.horizontalCenter
         }
     }
@@ -33,8 +32,12 @@ Image {
         model: appModel
         width: 600
         height: 900
-        anchors.left: myImage.left
-        anchors.leftMargin: 50
+        anchors {
+            left: myImage.left
+            leftMargin: 50
+            top: parent.top
+            topMargin: 30
+        }
         anchors.fill: parent
         cellWidth: 150; cellHeight: 150
         boundsBehavior: Flickable.StopAtBounds
@@ -44,7 +47,6 @@ Image {
             height: grid.cellHeight
             AppIcon {
                 id: img
-                type: model.type
                 anchors.centerIn: parent
                 sourceIcon: model.image
             }
@@ -52,7 +54,7 @@ Image {
                 anchors.top: img.bottom
                 anchors.horizontalCenter: parent.horizontalCenter
                 color: '#fff'
-                anchors.topMargin: model.type === "small" ? 5 : 10
+                anchors.topMargin: 5
                 text: model.name
             }
         }

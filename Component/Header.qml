@@ -20,7 +20,7 @@ Item {
                 rightMargin: 5
                 verticalCenter: parent.verticalCenter
             }
-            source: "qrc:/Assets/soon_full_battery_icon.png"
+            source: "qrc:/Assets/soon_full_battery.png"
         }
 
         Image {
@@ -32,7 +32,7 @@ Item {
                 rightMargin: 70
                 verticalCenter: parent.verticalCenter
             }
-            source: "qrc:/Assets/wifi_full_icon.png"
+            source: "qrc:/Assets/wifi_full.png"
         }
 
         Text {

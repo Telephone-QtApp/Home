@@ -31,9 +31,6 @@ QVariant AppModel::data(const QModelIndex &index, int role) const
     case Role_Name:
         result = m_appList.at(index.row())->m_name;
         break;
-    case Role_Type:
-        result = m_appList.at(index.row())->m_type;
-        break;
     default:
         break;
     }
@@ -46,7 +43,6 @@ QHash<int, QByteArray> AppModel::roleNames() const
     QHash<int, QByteArray> roles;
     roles[Role_Img] = "image";
     roles[Role_Name] = "name";
-    roles[Role_Type] = "type";
     return roles;
 }
 

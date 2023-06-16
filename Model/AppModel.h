@@ -6,10 +6,9 @@
 #include <QVector>
 
 struct DataItem {
-    DataItem(QString img, QString name, QString type) : m_img(img), m_name(name), m_type(type) {}
+    DataItem(QString img, QString name) : m_img(img), m_name(name) {}
     QString m_img;
     QString m_name;
-    QString m_type;
 };
 
 class AppModel : public QAbstractListModel {
@@ -25,8 +24,7 @@ public:
 private:
     enum AppRole {
         Role_Img,
-        Role_Name,
-        Role_Type
+        Role_Name
     };
 
     QVector<DataItem*> m_appList;

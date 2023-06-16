@@ -26,12 +26,12 @@ HomeController::~HomeController()
 void HomeController::initHomeController()
 {
     QVector<DataItem*> appList;
-    appList.push_back(new DataItem("qrc:/Assets/phone.png", "Phone", "small"));
-    appList.push_back(new DataItem("qrc:/Assets/setting.png", "Setting", "small"));
-    appList.push_back(new DataItem("qrc:/Assets/facetime.png", "Facetime", "medium"));
-    appList.push_back(new DataItem("qrc:/Assets/gallery.jpg", "Gallery", "medium"));
-    appList.push_back(new DataItem("qrc:/Assets/message.png", "Message", "medium"));
-    appList.push_back(new DataItem("qrc:/Assets/safari.png", "Safari", "small"));
+    appList.push_back(new DataItem("qrc:/Assets/phone.png", "Phone"));
+    appList.push_back(new DataItem("qrc:/Assets/setting.png", "Setting"));
+    appList.push_back(new DataItem("qrc:/Assets/face_time.png", "Facetime"));
+    appList.push_back(new DataItem("qrc:/Assets/gallery.jpg", "Gallery"));
+    appList.push_back(new DataItem("qrc:/Assets/message.png", "Message"));
+    appList.push_back(new DataItem("qrc:/Assets/safari.png", "Safari"));
     m_appModel->appendItem(appList);
 
     for (auto interface : m_interfaces) {

@@ -10,7 +10,7 @@ Item {
 
     Component.onCompleted: {
         appFocus.append({"source": "qrc:/Assets/setting.png"})
-        appFocus.append({"source": "qrc:/Assets/face_time_icon.png"})
+        appFocus.append({"source": "qrc:/Assets/face_time.png"})
         appFocus.append({"source": "qrc:/Assets/message.png"})
         appFocus.append({"source": "qrc:/Assets/phone.png"})
     }
