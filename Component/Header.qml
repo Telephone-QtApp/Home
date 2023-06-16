@@ -1,6 +1,5 @@
 import QtQuick 2.9
 import QtQuick.Controls 2.15
-import "../DataHMI/Res/resources.js" as RESOURCES
 
 Item {
     id: rootItem
@@ -14,11 +13,11 @@ Item {
 
         Image {
             id: batteryImage
-            width: 45
-            height: 40
+            width: 38
+            height: 34
             anchors {
                 right: parent.right
-                rightMargin: 50
+                rightMargin: 5
                 verticalCenter: parent.verticalCenter
             }
             source: "qrc:/Assets/soon_full_battery_icon.png"
@@ -26,11 +25,11 @@ Item {
 
         Image {
             id: wifiImage
-            width: 45
-            height: 40
+            width: 34
+            height: 30
             anchors {
                 right: parent.right
-                rightMargin: 120
+                rightMargin: 70
                 verticalCenter: parent.verticalCenter
             }
             source: "qrc:/Assets/wifi_full_icon.png"
@@ -40,10 +39,10 @@ Item {
             id: timeRec
             anchors {
                 left: parent.left
-                leftMargin: 50
+                leftMargin: 5
                 verticalCenter: parent.verticalCenter
             }
-            font.pixelSize: 32
+            font.pixelSize: 26
             color: "white"
             text: qsTr("22:22")
         }

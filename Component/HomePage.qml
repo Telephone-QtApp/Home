@@ -9,7 +9,7 @@ Image {
     source: "qrc:/Assets/background.jpg"
 
     CItems.Header {
-        width: 600
+        width: 648
         anchors {
             horizontalCenter: parent.horizontalCenter
             top: parent.top
@@ -18,9 +18,9 @@ Image {
     }
 
     CItems.Footer {
-        width: 600
-        height: 120
-        isRadius: 40
+        width: 588
+        height: 142
+        isRadius: 50
         anchors {
             bottom: parent.bottom
             bottomMargin: 100

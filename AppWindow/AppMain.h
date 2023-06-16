@@ -7,7 +7,6 @@
 #include <memory>
 #include "AppWindow.h"
 #include "Controller/HomeController.h"
-#include "../Model/AppModel.h"
 
 class AppMain : public QObject
 {

@@ -11,7 +11,7 @@
         <file>Assets/half_battery_icon.png</file>
         <file>Assets/full_battery_icon.png</file>
         <file>Assets/empty_battery_icon.png</file>
-        <file>Assets/safari_icon.png</file>
+        <file>Assets/safari.png</file>
         <file>Assets/face_time_icon.png</file>
     </qresource>
 </RCC>

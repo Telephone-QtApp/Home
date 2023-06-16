@@ -1,7 +1,6 @@
 import QtQuick 2.9
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
-import "../DataHMI/Res/resources.js" as RESOURCES
 
 Item {
     id: rootItem
@@ -10,10 +9,10 @@ Item {
     height: 50
 
     Component.onCompleted: {
-        appFocus.append({"source": RESOURCES.SETTING_ICON})
-        appFocus.append({"source": RESOURCES.FACETIME_ICON})
-        appFocus.append({"source": RESOURCES.MESSAGE_ICON})
-        appFocus.append({"source": RESOURCES.SAFARI_ICON})
+        appFocus.append({"source": "qrc:/Assets/setting.png"})
+        appFocus.append({"source": "qrc:/Assets/face_time_icon.png"})
+        appFocus.append({"source": "qrc:/Assets/message.png"})
+        appFocus.append({"source": "qrc:/Assets/phone.png"})
     }
 
     Rectangle {
