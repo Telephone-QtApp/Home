@@ -13,20 +13,15 @@ struct DataItem {
 };
 
 class AppModel : public QAbstractListModel {
-//    Q_OBJECT
+    Q_OBJECT
 public:
     AppModel(QObject* parent = nullptr);
     ~AppModel();
-
     int rowCount(const QModelIndex &parent) const override;
     QVariant data(const QModelIndex &index, int role) const override;
     QHash<int, QByteArray> roleNames() const override;
 
-    void beginResetModel();
-    void endResetModel();
-
-    void appendItem(DataItem* item);
-
+    void appendItem(QVector<DataItem*>& appList);
 private:
     enum AppRole {
         Role_Img,

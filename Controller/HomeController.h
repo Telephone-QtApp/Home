@@ -23,6 +23,7 @@ private:
     SystemSettingInterface* m_sysSetting {nullptr};
     SmartPhoneInterface* m_smartPhone {nullptr};
     AppModel* m_appModel {nullptr};
+    QVector<AbstractInterface*> m_interfaces;
 };
 
 #endif // HOMECONTROLLER_H
