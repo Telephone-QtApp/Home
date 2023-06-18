@@ -23,5 +23,4 @@ bool SystemSettingInterface::doConnect()
 bool SystemSettingInterface::doDisconnect()
 {
     // call API to disconnect service
-    delete this;
 }

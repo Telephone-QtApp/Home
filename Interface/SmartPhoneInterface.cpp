@@ -23,5 +23,4 @@ bool SmartPhoneInterface::doConnect()
 bool SmartPhoneInterface::doDisconnect()
 {
     // call API to disconnect service
-    delete this;
 }
