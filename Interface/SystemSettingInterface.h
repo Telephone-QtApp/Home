@@ -6,13 +6,13 @@
 class SystemSettingInterface : public AbstractInterface {
 public:
     static SystemSettingInterface* instance();
-private:
-    SystemSettingInterface();
-    ~SystemSettingInterface();
 
     bool doConnect() override;
 
     bool doDisconnect() override;
+private:
+    SystemSettingInterface();
+    ~SystemSettingInterface();
 };
 
 #endif // SYSTEMSETTINGINTERFACE_H

@@ -34,7 +34,7 @@ bool AbstractInterface::disconnect()
 
 bool AbstractInterface::doConnect()
 {
-    return false;
+    return true;
 }
 
 bool AbstractInterface::doDisconnect()
@@ -52,8 +52,13 @@ void AbstractInterface::doConnectedEvent()
 
 void AbstractInterface::doDisconnectedEvent()
 {
-    if (m_state != AbstractState::State_Ready)
+    if (m_state != AbstractState::State_WaitConnected) {
+        m_state = AbstractState::State_WaitConnected;
         return;
+    }
 
-    m_state = AbstractState::State_Disconnected;
+    if (m_state == AbstractState::State_WaitConnected)
+    {
+        doDisconnect();
+    }
 }

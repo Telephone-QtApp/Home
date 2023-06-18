@@ -17,10 +17,12 @@ SystemSettingInterface *SystemSettingInterface::instance()
 
 bool SystemSettingInterface::doConnect()
 {
+    return true;
     // call API to connect service
 }
 
 bool SystemSettingInterface::doDisconnect()
 {
     // call API to disconnect service
+    return true;
 }

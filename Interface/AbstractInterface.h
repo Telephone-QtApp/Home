@@ -18,7 +18,6 @@ public:
 
     virtual bool connect();
     virtual bool disconnect();
-
     virtual bool doConnect();
     virtual bool doDisconnect();
     virtual void doConnectedEvent();

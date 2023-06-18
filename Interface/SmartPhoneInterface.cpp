@@ -17,10 +17,12 @@ SmartPhoneInterface *SmartPhoneInterface::instance()
 
 bool SmartPhoneInterface::doConnect()
 {
+    return true;
     // call API to connect service
 }
 
 bool SmartPhoneInterface::doDisconnect()
 {
     // call API to disconnect service
+    return true;
 }
