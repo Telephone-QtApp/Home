@@ -33,7 +33,6 @@ void HomeController::initHomeController()
     appList.push_back(new DataItem("qrc:/Assets/message.png", "Message"));
     appList.push_back(new DataItem("qrc:/Assets/safari.png", "Safari"));
     m_appModel->appendItem(appList);
-
     for (auto interface : m_interfaces) {
         interface->connect();
     }

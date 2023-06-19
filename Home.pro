@@ -1,4 +1,5 @@
 QT += quick virtualkeyboard
+CONFIG += c++20
 
 SOURCES += \
         AppWindow/AppMain.cpp \
@@ -28,3 +29,10 @@ HEADERS += \
     Model/AppModel.h
 
 DISTFILES +=
+
+LIBS += -L$$PWD/../Executable/Libraries \
+        -lservice
+
+INCLUDEPATH += $$PWD/../ServiceWrapper/include \
+               $$PWD/../ServiceWrapper/include/Common
+               $$PWD/../ServiceWrapper/include/SystemSetting

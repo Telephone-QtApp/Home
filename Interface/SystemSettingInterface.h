@@ -1,6 +1,7 @@
 #ifndef SYSTEMSETTINGINTERFACE_H
 #define SYSTEMSETTINGINTERFACE_H
 
+#include <SystemSetting/SystemSettingService.h>
 #include "AbstractInterface.h"
 
 class SystemSettingInterface : public AbstractInterface {
@@ -13,6 +14,8 @@ public:
 private:
     SystemSettingInterface();
     ~SystemSettingInterface();
+
+    SystemSettingService* m_systemSetting;
 };
 
 #endif // SYSTEMSETTINGINTERFACE_H

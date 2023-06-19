@@ -1,7 +1,12 @@
 #include "SystemSettingInterface.h"
+#include <QDebug>
 
 SystemSettingInterface::SystemSettingInterface()
 {
+    m_systemSetting = SystemSettingService::instance();
+//    m_systemSetting->connectEvent.connect([&]() {
+//        qWarning() << "Connect Event";
+//    });
 }
 
 SystemSettingInterface::~SystemSettingInterface()
@@ -17,6 +22,7 @@ SystemSettingInterface *SystemSettingInterface::instance()
 
 bool SystemSettingInterface::doConnect()
 {
+    m_systemSetting->connectService();
     return true;
     // call API to connect service
 }
