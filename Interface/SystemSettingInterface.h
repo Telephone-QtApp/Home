@@ -2,7 +2,7 @@
 #define SYSTEMSETTINGINTERFACE_H
 
 #include <SystemSetting/SystemSettingService.h>
-#include "AbstractInterface.h"
+#include <AbstractInterface/AbstractInterface.h>
 
 class SystemSettingInterface : public AbstractInterface {
 public:

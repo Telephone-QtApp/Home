@@ -2,19 +2,20 @@ QT += quick virtualkeyboard
 CONFIG += c++20
 
 LIBS += -L$$PWD/../Executable/Libraries \
-        -lservice
+        -lservice \
+        -lCommon
 
 INCLUDEPATH += $$PWD/../ServiceWrapper/include \
-               $$PWD/../ServiceWrapper/include/Common
-               $$PWD/../ServiceWrapper/include/SystemSetting
-               $$PWD/../ServiceWrapper/include/SmartPhone
+               $$PWD/../ServiceWrapper/include/Common \
+               $$PWD/../ServiceWrapper/include/SystemSetting \
+               $$PWD/../ServiceWrapper/include/SmartPhone \
+               $$PWD/../Common
 
 SOURCES += \
         AppWindow/AppMain.cpp \
         AppWindow/AppWindow.cpp \
         Common/Enums.cpp \
         Controller/HomeController.cpp \
-        Interface/AbstractInterface.cpp \
         Interface/SmartPhoneInterface.cpp \
         Interface/SystemSettingInterface.cpp \
         Model/AppModel.cpp \
@@ -32,7 +33,6 @@ HEADERS += \
     AppWindow/AppWindow.h \
     Common/Enums.h \
     Controller/HomeController.h \
-    Interface/AbstractInterface.h \
     Interface/SmartPhoneInterface.h \
     Interface/SystemSettingInterface.h \
     Model/AppModel.h

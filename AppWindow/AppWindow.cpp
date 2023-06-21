@@ -14,7 +14,7 @@ void AppWindow::createWindow(QQuickView *view)
     if (nullptr == view)
         return;
 
-    const QUrl url(u"qrc:/Home/Component/main.qml"_qs);
+    const QUrl url("qrc:/Home/Component/main.qml");
     view->setWidth(700);
     view->setHeight(1100);
     view->setSource(url);

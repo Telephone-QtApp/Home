@@ -2,7 +2,7 @@
 #define SMARTPHONEINTERFACE_H
 
 #include <SmartPhone/SmartPhoneService.h>
-#include "AbstractInterface.h"
+#include <AbstractInterface/AbstractInterface.h>
 
 class SmartPhoneInterface : public AbstractInterface {
 public:
