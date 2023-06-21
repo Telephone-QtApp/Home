@@ -1,6 +1,14 @@
 QT += quick virtualkeyboard
 CONFIG += c++20
 
+LIBS += -L$$PWD/../Executable/Libraries \
+        -lservice
+
+INCLUDEPATH += $$PWD/../ServiceWrapper/include \
+               $$PWD/../ServiceWrapper/include/Common
+               $$PWD/../ServiceWrapper/include/SystemSetting
+               $$PWD/../ServiceWrapper/include/SmartPhone
+
 SOURCES += \
         AppWindow/AppMain.cpp \
         AppWindow/AppWindow.cpp \
@@ -11,6 +19,7 @@ SOURCES += \
         Interface/SystemSettingInterface.cpp \
         Model/AppModel.cpp \
         main.cpp
+
 resources.prefix = /$${TARGET}
 RESOURCES += resources \
     Home.qrc \
@@ -29,10 +38,3 @@ HEADERS += \
     Model/AppModel.h
 
 DISTFILES +=
-
-LIBS += -L$$PWD/../Executable/Libraries \
-        -lservice
-
-INCLUDEPATH += $$PWD/../ServiceWrapper/include \
-               $$PWD/../ServiceWrapper/include/Common
-               $$PWD/../ServiceWrapper/include/SystemSetting

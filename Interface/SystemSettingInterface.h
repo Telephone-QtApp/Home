@@ -8,6 +8,10 @@ class SystemSettingInterface : public AbstractInterface {
 public:
     static SystemSettingInterface* instance();
 
+    void connectEvent();
+
+    void disconnectEvent();
+
     bool doConnect() override;
 
     bool doDisconnect() override;

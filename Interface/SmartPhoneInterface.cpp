@@ -1,7 +1,11 @@
 #include "SmartPhoneInterface.h"
+#include <QDebug>
 
 SmartPhoneInterface::SmartPhoneInterface()
 {
+    m_smartPhone = SmartPhoneService::instance();
+    m_smartPhone->connectEvent.regCallbackFunc(std::bind(&SmartPhoneInterface::connectEvent, this));
+    m_smartPhone->disconnectEvent.regCallbackFunc(std::bind(&SmartPhoneInterface::disconnectEvent, this));
 }
 
 SmartPhoneInterface::~SmartPhoneInterface()
@@ -17,12 +21,22 @@ SmartPhoneInterface *SmartPhoneInterface::instance()
 
 bool SmartPhoneInterface::doConnect()
 {
+    m_smartPhone->connectService();
     return true;
-    // call API to connect service
 }
 
 bool SmartPhoneInterface::doDisconnect()
 {
-    // call API to disconnect service
+    m_smartPhone->disconnectService();
     return true;
+}
+
+void SmartPhoneInterface::connectEvent()
+{
+    qWarning() << "[SmartPhoneInterface] connectEvent";
+}
+
+void SmartPhoneInterface::disconnectEvent()
+{
+    qWarning() << "[SmartPhoneInterface] disconnectEvent";
 }
