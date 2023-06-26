@@ -29,7 +29,7 @@ void HomeController::initHomeController()
     appList.push_back(new DataItem("qrc:/Assets/phone.png", "Phone"));
     appList.push_back(new DataItem("qrc:/Assets/setting.png", "Setting"));
     appList.push_back(new DataItem("qrc:/Assets/face_time.png", "Facetime"));
-    appList.push_back(new DataItem("qrc:/Assets/gallery.jpg", "Gallery"));
+    appList.push_back(new DataItem("qrc:/Assets/gallery.png", "Gallery"));
     appList.push_back(new DataItem("qrc:/Assets/message.png", "Message"));
     appList.push_back(new DataItem("qrc:/Assets/safari.png", "Safari"));
     m_appModel->appendItem(appList);
